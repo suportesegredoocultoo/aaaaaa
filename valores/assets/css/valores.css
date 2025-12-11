@@ -1,0 +1,176 @@
+.boleto-container {
+    background: #fff;
+    border: 1px solid #4b4b4b86;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho */
+
+.boleto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4b4b4b86;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logo-area img {
+    max-height: 40px;
+    max-width: 120px;
+    width: auto;
+}
+
+.protocolo {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Campos */
+
+.campo {
+    border: 1px solid #4b4b4b86;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.campo span {
+    font-size: 14px;
+}
+
+/* Layout responsivo */
+
+@media (min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    place-content: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.solicitar-modal,
+.agendar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s;
+    place-content: center;
+    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solicitar-modal *,
+.agendar-modal * {
+    box-sizing: border-box;
+}
+
+.solicitar-modal .window,
+.agendar-modal .window {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem 1rem;
+    width: calc(100vw - 2rem);
+    max-width: 412px;
+    color: #1351B4;
+    text-align: center;
+}
+
+.solicitar-modal h2,
+.agendar-modal .window h2 {
+    font-size: 1.4rem;
+}
+
+.solicitar-modal p,
+.agendar-modal .window p {
+    margin-top: 1rem;
+    font-size: 1.04rem;
+}
+
+.totaldisponivel {
+    border: 1px solid rgba(7, 29, 65, 0.4);
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.totaldisponivel strong {
+    font-weight: 700;
+}
+
+.solicitar-modal .window,
+.agendar-modal .window {
+    position: relative;
+    padding: 1.4rem;
+    transition: margin-top 0.3s;
+}
+
+.solicitar-modal .window .close,
+.agendar-modal .window .close {
+    position: absolute;
+    font-weight: 900;
+    font-size: 1.5rem;
+    scale: 1.2;
+    color: #747474;
+    left: 1rem;
+    top: 1rem;
+    font-family: cursive;
+}
+
+.solicitar-modal .window .br-button,
+.agendar-modal .window .br-button {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.MAINTKT,
+.MULTTKT {
+    display: none;
+    font-size: 0px;
+    opacity: 0;
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+}
